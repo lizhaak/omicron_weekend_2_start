@@ -18,34 +18,50 @@ $(document).ready(function(){
         $('#prev').on('click', turnRed);
 
         function nextPerson() {
+          $('#ajax-data').fadeOut('slow',function(){
 
           if(personIndex < lengthOfArray) {
+
             personIndex++;
+
             $('#ajax-data').empty();
-            // $('#ajax-data').fadeOut();
+
             $('.box').removeClass('red');
-            // $('#ajax-data').fadeIn();
+            $('#ajax-data').fadeIn();
             displayPerson(data.omicron[personIndex]);
+            turnRed();
           } else {
-            personIndex = -1;
+            personIndex = 0;
+            $('#ajax-data').empty();
             $('.box').removeClass('red');
-            $('.box' + personIndex).addClass('red');
+            $('#ajax-data').fadeIn();
+            displayPerson(data.omicron[personIndex]);
+            turnRed();
+            //$('.box' + personIndex).addClass('red');
           }
+
+        });
         }
 
         function previousPerson() {
-          // $('#ajax-data').fadeOut();
+          $('#ajax-data').fadeOut('slow', function(){
           if(personIndex > 0) {
             personIndex--;
             $('#ajax-data').empty();
             $('.box').removeClass('red');
-            // $('#ajax-data').fadeIn();
+            $('#ajax-data').fadeIn();
             displayPerson(data.omicron[personIndex]);
+            turnRed();
           } else {
-            personIndex = lengthOfArray + 1;
+            personIndex = lengthOfArray;
+            $('#ajax-data').empty();
             $('.box').removeClass('red');
-            $('.box' + personIndex).addClass('red');
+            $('#ajax-data').fadeIn();
+            displayPerson(data.omicron[personIndex]);
+            turnRed();
+            // $('.box' + personIndex).addClass('red');
           }
+          });
         }
 
         function turnRed() {
