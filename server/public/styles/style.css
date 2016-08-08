@@ -1,0 +1,33 @@
+#ajax-data {
+  height: 150px;
+}
+
+.box {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: #aaaaaa;
+}
+
+.miniBoxes {
+  margin: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.red {
+  background-color: red;
+}
+
+/*.box0 {
+  background-color: #aaaaaa;
+}
+
+.box1 {
+  background-color: #aaaaaa;
+}
+
+.box2 {
+  background-color: #aaaaaa;
+}*/
